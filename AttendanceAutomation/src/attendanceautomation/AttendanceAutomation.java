@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -24,6 +25,11 @@ public class AttendanceAutomation extends Application {
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
+        stage.setMinWidth(650);
+        stage.setMinHeight(530);
+        stage.setTitle("EASV Attendance System");
+        Image icon = new Image(getClass().getResourceAsStream("/attendanceautomation/gui/images/EASYDVEST.png"));
+        stage.getIcons().add(icon);
         stage.show();
     }
 
