@@ -1,0 +1,23 @@
+/* 
+    Author schemabuoi
+    Author kiddo
+*/
+
+.button:hover{
+    -fx-background-color:#d3d3d3;
+    -fx-text-fill:white;
+    -fx-background-repeat:no-repeat;
+    -fx-background-position:center;
+    -fx-background-size:10 20;
+}
+.button{
+    -fx-background-color:transparent;
+    -fx-text-fill:#b3b3b3;
+    -fx-background-image:url("../images/Minimize.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position:center;
+    -fx-background-size:10 20;       
+}
+.button:pressed{
+    -fx-text-fill:#535353;
+}

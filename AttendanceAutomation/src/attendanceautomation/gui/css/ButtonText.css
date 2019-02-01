@@ -1,0 +1,15 @@
+/* 
+    Author schemabuoi
+    Author kiddo
+*/
+
+.button{
+    -fx-background-color:transparent;     
+    -fx-text-fill: #5e5e5e;
+}
+.button:hover {
+    -fx-underline: true;
+}
+.button:pressed{
+    -fx-text-fill: #090909;
+}

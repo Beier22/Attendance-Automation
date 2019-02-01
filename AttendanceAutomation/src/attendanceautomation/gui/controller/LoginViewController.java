@@ -5,31 +5,82 @@
  */
 package attendanceautomation.gui.controller;
 
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 
 /**
+ * FXML Controller class
  *
  * @author Acer
  */
 public class LoginViewController implements Initializable {
-    
+
     @FXML
-    private Label label;
-    
+    private TextField txtUsername;
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
-    
+    private JFXTextField txtPassword;
+    private Button btnLogin;
+    @FXML
+    private AnchorPane paneLogin;
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb) 
+    {
+        createTextFieldsListeners();
     }    
+
+    private void createTextFieldsListeners() 
+    {
+        txtUsername.setOnKeyPressed(new EventHandler<KeyEvent>()
+                {
+                    @Override
+                    public void handle(KeyEvent key) 
+                    {
+                        if(key.getCode() == KeyCode.ENTER)
+                        {
+                            txtPassword.requestFocus();
+                        }
+                    }
+                    
+                }
+            );
+        txtPassword.setOnKeyPressed(new EventHandler<KeyEvent>()
+                {
+                    @Override
+                    public void handle(KeyEvent key) 
+                    {
+                        if(key.getCode() == KeyCode.ENTER)
+                        {
+                            btnLogin.fire();
+                        }
+                    }
+                    
+                }
+            );
+    }
+
+    @FXML
+    private void clickLogin(ActionEvent event) 
+    {
+        
+    }
+
+    @FXML
+    private void clickForgotPassword(ActionEvent event) {
+    }
     
 }
