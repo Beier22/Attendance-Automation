@@ -14,7 +14,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendanceautomation.gui.controller.LoginViewController">
     <children>
-      <StackPane layoutX="64.0" layoutY="40.0" prefHeight="150.0" prefWidth="1000.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <StackPane fx:id="stcImage" layoutX="64.0" layoutY="40.0" prefHeight="150.0" prefWidth="1000.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fitHeight="150.0" fitWidth="346.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -39,7 +39,7 @@
                </font></JFXPasswordField>
          </children>
       </StackPane>
-      <StackPane layoutY="230.0" minHeight="60.0" prefHeight="60.0" prefWidth="1000.0" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+      <StackPane fx:id="stcRememberMe" layoutY="230.0" minHeight="60.0" prefHeight="60.0" prefWidth="1000.0" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
          <children>
             <HBox maxWidth="300.0" prefHeight="60.0" prefWidth="300.0">
                <children>
@@ -53,7 +53,7 @@
                   </StackPane>
                   <AnchorPane prefHeight="60.0" prefWidth="85.0">
                      <children>
-                        <JFXToggleButton layoutX="38.0" prefHeight="60.0" prefWidth="74.0" text=" " toggleColor="#fafafa" toggleLineColor="#009fe3" unToggleLineColor="#4d4d4d" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="-19.0" AnchorPane.topAnchor="0.0" />
+                        <JFXToggleButton fx:id="tglRememberMe" layoutX="38.0" prefHeight="60.0" prefWidth="74.0" text=" " toggleColor="#fafafa" toggleLineColor="#009fe3" unToggleLineColor="#4d4d4d" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="-19.0" AnchorPane.topAnchor="0.0" />
                      </children>
                   </AnchorPane>
                </children>
@@ -62,7 +62,7 @@
       </StackPane>
       <StackPane layoutY="104.0" prefHeight="83.0" prefWidth="1000.0" AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="290.0">
          <children>
-            <JFXButton fx:id="btnLogin" prefHeight="35.0" prefWidth="300.0" stylesheets="@../css/ButtonSecondary.css" text="Log In">
+            <JFXButton fx:id="btnLogin" onAction="#clickLogin" prefHeight="35.0" prefWidth="300.0" stylesheets="@../css/ButtonSecondary.css" text="Log In">
                <font>
                   <Font name="Montserrat Bold" size="15.0" />
                </font>
@@ -71,7 +71,7 @@
       </StackPane>
       <StackPane layoutY="490.0" prefHeight="60.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <JFXButton onAction="#clickForgotPassword" prefHeight="39.0" prefWidth="190.0" stylesheets="@../css/ButtonText.css" text="Forgot Password?">
+            <JFXButton fx:id="btnForgotPassword" onAction="#clickForgotPassword" prefHeight="39.0" prefWidth="190.0" stylesheets="@../css/ButtonText.css" text="Forgot Password?">
                <font>
                   <Font name="Montserrat Medium" size="15.0" />
                </font>
