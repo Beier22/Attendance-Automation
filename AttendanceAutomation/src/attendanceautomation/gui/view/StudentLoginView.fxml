@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane fx:id="stcImage" prefHeight="150.0" prefWidth="1000.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="346.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LOGO%20copy.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <StackPane layoutY="199.0" prefHeight="100.0" prefWidth="1000.0" AnchorPane.bottomAnchor="261.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="199.0">
+         <children>
+            <Label text="Your Attendance for                       has been submitted">
+               <font>
+                  <Font name="Montserrat Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label text="02/01/2019">
+               <font>
+                  <Font name="Montserrat Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <StackPane layoutY="500.0" prefHeight="60.0" prefWidth="1000.0">
+         <children>
+            <JFXButton fx:id="btnForgotPassword" onAction="#clickForgotPassword" prefHeight="39.0" prefWidth="190.0" stylesheets="@../css/ButtonText.css" text="Log Out">
+               <font>
+                  <Font name="Montserrat Medium" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </StackPane>
+      <StackPane layoutX="500.0" layoutY="346.0" prefHeight="100.0" prefWidth="502.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="110.0" stylesheets="@../css/ButtonCalendar.css" />
+         </children>
+         <padding>
+            <Insets right="250.0" />
+         </padding>
+      </StackPane>
+      <StackPane layoutY="346.0" prefHeight="100.0" prefWidth="500.0">
+         <padding>
+            <Insets left="250.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="110.0" stylesheets="@../css/ButtonQuit.css" />
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
